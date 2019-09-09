@@ -130,6 +130,10 @@ public class Mutations {
 		}
 
 		for (int i = 0; i < 8; i++) {
+			
+			if (testmutation == gene2) {System.out.println(mutations);
+			return 2;
+			}
 
 			if (gene1.charAt(i) != gene2.charAt(i)) {
 
