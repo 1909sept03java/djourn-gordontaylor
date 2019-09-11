@@ -81,7 +81,7 @@ public class Mutations {
 	static int mutationChecker(String gene1, String gene2)  {
 		
 		gene1 = gene1.toUpperCase();
-		gene2 = gene1.toUpperCase();
+		gene2 = gene2.toUpperCase();
 		String[] genebank = { "AACCGGTA", "AACCGCTA", "AAACGGTA" };
 		
 

@@ -1,4 +1,6 @@
 package codingchallengespack;
+import codingchallengespack.Arithmetic;
+
 
 public interface Arithmetic {
 
@@ -9,7 +11,11 @@ public interface Arithmetic {
 	
 	
 }
-class testClass implements Arithmetic{
+class  mathClass implements Arithmetic{
+	
+	private static final mathClass mathematics = new mathClass();
+	mathClass() {};
+	
 	
 
 	public int adder(int num1, int num2) {
@@ -31,15 +37,7 @@ class testClass implements Arithmetic{
 		return  (float)num1/(float)num2;
 	}
 	
-	public static void main (String[] args) 
-    { 
-        testClass tester = new testClass(); 
-        System.out.println("1 + 2 = " + tester.adder(1, 2)); 
-        System.out.println("1 - 2 = " + tester.subtracter(1, 2)); 
-        System.out.println("1 * 2 = " + tester.multiplier(1, 2));
-        System.out.println("1 / 2 = " + tester.divider(1, 2));
-        
-    } 
-	
-	
+	public static mathClass getInstance() {
+return mathematics;	
+	}
 }
