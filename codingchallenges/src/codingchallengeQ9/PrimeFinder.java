@@ -10,10 +10,20 @@ public class PrimeFinder {
 		
 		
 		
-		for(int i = 0; i <allnumbers.size(); i++) {
-			int range = (allnumbers.size())/2;
-			if()
+		for(int i = 3; i <allnumbers.size()-1; i++) {
+			int range = allnumbers.get(i)/2;
+			for(int j = 2; j <= range; j++) {
+				if(allnumbers.get(i)%j==0){  
+					i = i+1;
+					range = allnumbers.get(i)/2;
+					j=0;
+				     break;      
+				    }      
+				
+			}
 			
+			
+			System.out.println(allnumbers.get(i).toString());
 			
 		}
 			

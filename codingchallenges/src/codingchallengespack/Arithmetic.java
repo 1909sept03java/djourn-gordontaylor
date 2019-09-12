@@ -17,7 +17,7 @@ class  mathClass implements Arithmetic{
 	mathClass() {};
 	
 	
-
+	@Override
 	public int adder(int num1, int num2) {
 		
 		return num1+num2;
