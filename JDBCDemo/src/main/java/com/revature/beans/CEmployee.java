@@ -1,11 +1,11 @@
 package com.revature.beans;
 
-public class Cave {
+public class CEmployee {
 	
-	public Cave() {
+	public CEmployee() {
 		super();
 	}
-	public Cave(int id, String name, int maxBears) {
+	public CEmployee(int id, String name, int maxBears) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -53,7 +53,7 @@ public class Cave {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Cave other = (Cave) obj;
+		CEmployee other = (CEmployee) obj;
 		if (id != other.id)
 			return false;
 		if (maxBears != other.maxBears)

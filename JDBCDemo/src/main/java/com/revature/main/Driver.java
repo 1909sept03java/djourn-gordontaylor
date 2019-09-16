@@ -2,7 +2,7 @@ package com.revature.main;
 
 import java.io.IOException;
 
-import com.revature.beans.Cave;
+import com.revature.beans.CEmployee;
 import com.revature.dao.CaveDAO;
 import com.revature.dao.CaveDAOImpl;
 
@@ -19,7 +19,7 @@ public class Driver {
 		}
 		*/
 		CaveDAO cd = new CaveDAOImpl();
-		for (Cave c : cd.getCaves()) {
+		for (CEmployee c : cd.getCaves()) {
 			System.out.println(c);
 		}
 		System.out.println(cd.getCaveById(1));

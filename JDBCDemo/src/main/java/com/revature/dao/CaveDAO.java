@@ -3,14 +3,14 @@ package com.revature.dao;
 import java.io.IOException;
 import java.util.List;
 
-import com.revature.beans.Cave;
+import com.revature.beans.CEmployee;
 
 public interface CaveDAO {
 
-	public List<Cave> getCaves() throws IOException;
-	public Cave getCaveById(int id) throws IOException;
-	public void createCave(Cave cave);
-	public void updateCave(Cave cave);
-	public void deleteCave(Cave cave);
+	public List<CEmployee> getCaves() throws IOException;
+	public CEmployee getCaveById(int id) throws IOException;
+	public void createCave(CEmployee cave);
+	public void updateCave(CEmployee cave);
+	public void deleteCave(CEmployee cave);
 	
 }

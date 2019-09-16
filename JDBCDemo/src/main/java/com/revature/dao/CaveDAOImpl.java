@@ -9,14 +9,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.revature.beans.Cave;
+import com.revature.beans.CEmployee;
 import com.revature.util.ConnectionUtil;
 
 public class CaveDAOImpl implements CaveDAO {
 
 	@Override
-	public List<Cave> getCaves() throws IOException  {
-		List<Cave> cl = new ArrayList<>();
+	public List<CEmployee> getCaves() throws IOException  {
+		List<CEmployee> cl = new ArrayList<>();
 		// try-with-resources... resources included in the try args will be closed at the end of the block
 		// works with all AutoCloseable resources
 		try (Connection conn = ConnectionUtil.getConnectionFromFile("connection.properties")) {
@@ -27,7 +27,7 @@ public class CaveDAOImpl implements CaveDAO {
 				int caveId = rs.getInt("CAVE_ID");
 				String caveName = rs.getString("CAVE_NAME");
 				int maxBears = rs.getInt("MAX_BEARS");
-				cl.add(new Cave(caveId, caveName, maxBears));
+				cl.add(new CEmployee(caveId, caveName, maxBears));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -36,8 +36,8 @@ public class CaveDAOImpl implements CaveDAO {
 	}
 
 	@Override
-	public Cave getCaveById(int id) throws IOException {
-		Cave c = null;
+	public CEmployee getCaveById(int id) throws IOException {
+		CEmployee c = null;
 		// try-with-resources... resources included in the try args will be closed at the end of the block
 		// works with all AutoCloseable resources
 		try (Connection conn = ConnectionUtil.getConnectionFromFile("connection.properties")) {
@@ -49,7 +49,7 @@ public class CaveDAOImpl implements CaveDAO {
 				int caveId = rs.getInt("CAVE_ID");
 				String caveName = rs.getString("CAVE_NAME");
 				int maxBears = rs.getInt("MAX_BEARS");
-				c = new Cave(caveId, caveName, maxBears);
+				c = new CEmployee(caveId, caveName, maxBears);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -58,19 +58,19 @@ public class CaveDAOImpl implements CaveDAO {
 	}
 
 	@Override
-	public void createCave(Cave cave) {
+	public void createCave(CEmployee cave) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void updateCave(Cave cave) {
+	public void updateCave(CEmployee cave) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteCave(Cave cave) {
+	public void deleteCave(CEmployee cave) {
 		// TODO Auto-generated method stub
 		
 	}
