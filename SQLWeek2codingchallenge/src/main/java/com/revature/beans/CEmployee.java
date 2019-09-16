@@ -42,7 +42,7 @@ public class CEmployee {
 	}
 	@Override
 	public String toString() {
-		return "Employee emp_id=" + id + ", name=" + fname + ", salary=$" + salary ;
+		return "Employee emp_id=" + id + ", name=" + fname + " " + lname + ", salary=$" + salary ;
 	}
 	@Override
 	public int hashCode() {
