@@ -21,17 +21,19 @@ public class Driver {
 //    System.out.println(conn);
 			Dao cd = new Daoimpl();
 			Dao2 dc = new Dao2impl();
-			for (CEmployee c : cd.getEmployee()) {
-				System.out.println(c);
-			}
-			for (CDepartment d : dc.getDepartment()) {
-				System.out.println(d);
-			}
+//			for (CEmployee c : cd.getEmployee()) {
+//				System.out.println(c);
+//			}
+//			for (CDepartment d : dc.getDepartment()) {
+//				System.out.println(d);
+//			}
 			System.out.println(cd.getEmployeeById(1));
 			System.out.println(dc.getDepartmentById(10000));
-			System.out.println(CDeptAvg.getAVG(10001));
+			System.out.println("Department Salary Average Before Increase");
+			System.out.println("$"+ CDeptAvg.getAVG(10001));
+			System.out.println("Department Salary Average After Increase");
 			CDeptAvg.SetAvg(10001);
-			System.out.println(CDeptAvg.getAVG(10001));
+			System.out.println("$"+ CDeptAvg.getAVG(10001));
 		}
 
 		catch (Exception e) {

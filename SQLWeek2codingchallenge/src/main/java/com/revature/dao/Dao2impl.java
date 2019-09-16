@@ -12,7 +12,7 @@ import java.util.List;
 import com.revature.beans.CDepartment;
 import com.revature.beans.CEmployee;
 
-import com.revature.util.connectionUtil;
+import com.revature.util.ConnectionUtil;
 
 public class Dao2impl implements Dao2{
 	
@@ -21,7 +21,7 @@ public class Dao2impl implements Dao2{
 		List<CDepartment> cl = new ArrayList<>();
 		// try-with-resources... resources included in the try args will be closed at the end of the block
 		// works with all AutoCloseable resources
-		try (Connection conn = connectionUtil.getConnection("src\\main\\java\\connection.properties")) {
+		try (Connection conn = ConnectionUtil.getConnection("src\\main\\java\\connection.properties")) {
 			String sql = "SELECT * FROM CDEPARTMENT";
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
@@ -46,7 +46,7 @@ public class Dao2impl implements Dao2{
 		CDepartment c = null;
 		// try-with-resources... resources included in the try args will be closed at the end of the block
 		// works with all AutoCloseable resources
-		try (Connection conn = connectionUtil.getConnection("src\\main\\java\\connection.properties")) {
+		try (Connection conn = ConnectionUtil.getConnection("src\\main\\java\\connection.properties")) {
 			String sql = "SELECT * FROM CDEPARTMENT WHERE DEPARTMENT_ID = ?";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, id);

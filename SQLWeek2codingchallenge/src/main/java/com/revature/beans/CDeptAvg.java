@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 
-import com.revature.util.connectionUtil;
+import com.revature.util.ConnectionUtil;
 
 public class CDeptAvg {
 	private static Connection con;
@@ -17,7 +17,7 @@ public class CDeptAvg {
 	double avg  = 0;
 		// try-with-resources... resources included in the try args will be closed at the end of the block
 		// works with all AutoCloseable resources
-		try (Connection conn = connectionUtil.getConnection("src\\main\\java\\connection.properties")) {
+		try (Connection conn = ConnectionUtil.getConnection("src\\main\\java\\connection.properties")) {
 			String sql = "SELECT AVG(B.SALARY) AS AVGSALARY FROM CDEPARTMENT A INNER JOIN CEMPLOYEE B ON A.DEPARTMENT_ID = B.DEPARTMENT_ID WHERE A.DEPARTMENT_ID = ? GROUP BY A.DEPARTMENT_ID";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, id);
@@ -38,7 +38,7 @@ public class CDeptAvg {
 	}
 	
 public static void SetAvg(int department_id) throws SQLException, IOException{
-	Connection con = connectionUtil.getConnection("src\\main\\java\\connection.properties");
+	Connection con = ConnectionUtil.getConnection("src\\main\\java\\connection.properties");
 	float AVG_SALARY=0;
 	CallableStatement cstmt = con.prepareCall("{call SP_GIVE_RAISE(?, ?)}");
 	cstmt.setInt(1,department_id );
