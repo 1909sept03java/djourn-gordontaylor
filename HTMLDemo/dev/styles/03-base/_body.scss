@@ -1,0 +1,127 @@
+$color--main: rgb(161, 193, 241);
+$color--header1:#063070;
+$color--border: lighten($color--main, 20%);
+
+body {
+   background-image: url("");  
+   
+   background-attachment: fixed;
+   background-position: 0% 0%;
+   background-size: 100%;
+  
+   
+   
+   
+    
+   
+   nav{
+      font-family: 'Josefin Slab', serif;
+background-color: black;
+      width: 100%;
+      opacity: 0.7;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0%;
+      text-align: center;
+      padding: .5%;
+      
+      // background-color: white;
+      opacity: 0.8;
+       
+      }
+      .backgroundcol{
+opacity: 0.6;
+background-color:black;
+width: 100%;
+height: 100%;
+
+      }
+      a{
+         
+         color: #6b0808;
+         font-size: 3em;
+         font-weight: bold;
+         text-decoration: none !important;   
+         padding: 1%;
+      }
+      .darkheader {
+      color: gray;
+      font-size: 3em;
+      font-weight: bold;
+      text-decoration: none !important; 
+      
+   
+      }
+      h2{
+         // background-color: white;
+         opacity: 1 !important;
+         font-family: 'Josefin Slab', serif;
+         margin: 1%;
+         margin-left: 11%;
+         padding-top: 1%;
+         text-align: left;
+         line-height: 1.9;
+         color:white;
+         font-size: 3em;
+         font-weight: bold;
+         text-decoration: none !important;   
+      }
+   
+
+   p {
+      font-family: 'Josefin Slab', serif;
+     color: white;
+     background-color: black;
+     opacity: 1 !important;
+     margin: 1%;
+     padding-top: 1%;
+     padding-bottom: 1%;
+      padding-left: 10%;
+      padding-right: 10%;
+      text-align: left;
+      line-height: 1.9;
+   }
+}
+
+.bob {
+   max-width: 100%;
+   width: 100%;
+   overflow: hidden;
+   height: 10%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+  
+
+
+}
+
+// nav{
+
+// width: 100%;
+// margin-left: 0;
+// margin-right: 0;
+// margin-bottom: 0%;
+// text-align: center;
+// padding: 1%;
+
+// background-color: $color--main;
+ 
+// }
+// .darkheader {
+// color: $color--header1;
+// font-size: 3%;
+// font-weight: bold;
+// text-decoration: none !important; 
+   
+// }
+// h2{
+//    padding-left: 10%;
+//    padding-right: 10%;
+//    text-align: left;
+//    line-height: 1.9;
+//    color: $color--header1;
+//    font-size: 3%;
+//    font-weight: bold;
+//    text-decoration: none !important;   
+// }
