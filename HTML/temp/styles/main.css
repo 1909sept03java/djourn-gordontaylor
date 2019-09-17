@@ -1,0 +1,225 @@
+a,
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+canvas,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+section,
+samp,
+small,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+ul,
+var,
+video {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before,
+q::after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-image: url("https://www.telegraph.co.uk/content/dam/art/2016/06/05/banksy-child-angel_trans%2B%2Beo_i_u9APj8RuoebjoAHt0k9u7HhRJvuo-ZLenGRumA.jpg");
+  background-attachment: fixed;
+  background-position: 0% 0%;
+  background-size: 100%;
+}
+
+body nav {
+  font-family: 'Josefin Slab', serif;
+  background-color: black;
+  width: 100%;
+  opacity: 0.7;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0%;
+  text-align: center;
+  padding: .5%;
+  opacity: 0.8;
+}
+
+body .backgroundcol {
+  opacity: 0.6;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+body a {
+  color: #6b0808;
+  font-size: 3em;
+  font-weight: bold;
+  text-decoration: none !important;
+  padding: 1%;
+}
+
+body .darkheader {
+  color: gray;
+  font-size: 3em;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+body h2 {
+  opacity: 1 !important;
+  font-family: 'Josefin Slab', serif;
+  margin: 1%;
+  margin-left: 11%;
+  padding-top: 1%;
+  text-align: left;
+  line-height: 1.9;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+body p {
+  font-family: 'Josefin Slab', serif;
+  color: white;
+  background-color: black;
+  opacity: 1 !important;
+  margin: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+  line-height: 1.9;
+}
+
+.bob {
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  height: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tablestyle {
+  font-family: 'Josefin Slab', serif;
+  color: white;
+  background-color: black;
+  opacity: .8;
+  margin: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+  line-height: 1.9;
+}
+
+.tablestyle h2 {
+  opacity: 1 !important;
+  font-family: 'Josefin Slab', serif;
+  margin: 1%;
+  margin-left: 11%;
+  padding-top: 6%;
+  text-align: left;
+  line-height: 1.9;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  text-decoration: none !important;
+}

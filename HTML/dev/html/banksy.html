@@ -1,0 +1,89 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>About Banksy</title>
+            <meta name="viewport" content="width-device-width, initial-scale-1"/>
+            <link rel="stylesheet" href="styles/main.css">
+        </head>
+        <script>
+                ​
+                            function changeFontColor() {
+                              var thisColor = document.getElementById("currentColor");
+                              var newColor = document.getElementById("newColor").value;
+                              thisColor.style.color = newColor;
+                            }
+                            
+                          </script>
+                          <style>
+                                input {cursor: grab;}
+                                .nice-button {
+                                border: 2px solid black;
+                                color: Black;
+                                background-color: Indigo;
+                                padding: 10px 14px;
+                                margin-top: 25px;
+                                cursor: pointer;
+                                transition: all 0.5s ease-in-out; }
+                        .nice-button:hover {
+                                background-color: Black;
+                                color: Indigo;}
+                            </style>
+                             
+        <body>
+
+                <img class="bob"
+                src="https://www.brucestevenson.co.uk/datafiles/uploaded/cms_banner/main/main_213_banksy%20banner.jpg"
+                alt="Girl With Balloon">
+          <div class="my-background" ></div>
+          <div class="nav">
+             
+                <nav>
+                   <a class="darkheader"href="https://en.wikipedia.org/wiki/Banksy"> Banksy Wiki</a>
+                   <a href="http://www.banksy.co.uk/"> Banksy Official Site</a>
+                   <a class="darkheader"href=""> About</a>
+                   <a href="banksy.html"> Works</a>
+                   <a class="darkheader" style="color: white"href="index.html"> Home</a>
+       
+                </nav>
+             
+       
+          </div>
+          
+            <div id="top-container" class="tablestyle">
+                <header>
+                    <h2>Banksy</h2>
+                    <h4>Identity: Unknown</h3>
+                    <h4>Location: Unknown</h4>
+                </header>
+                <div>
+                    <div><h3>Expensive Artwork</h3></div>
+                    <label for="newColor">New Color:</label>
+                             <input type="text" id="newColor">
+                             <br>
+                             <button class="nice-button" onclick="changeFontColor()" >Change font color</button>
+                    <table id="currentColor"> 
+                        <tr>
+                            <th>Title</th>
+                            <th>Price(GBP)</th>
+                            <th>Image</th>
+                        </tr>
+                        <tr>
+                            <td>Keep It Spotless</td>
+                            <td>1,300,000</td>
+                            <td><img src="img/Banksy-KeepitSpotless-800x555.jpg" width="260px" height="194px"/></td>
+                        </tr>
+                        <tr>
+                            <td>Submerged Phone Booth</td>
+                            <td>722,500</td>
+                            <td><img  src="img/Banksy-SubmergedPhoneBooth-1024x768.jpg" width="260px" height="194px"/></td>
+                        </tr>
+                        <tr>
+                            <td>Simple Intelligence Testing</td>
+                            <td>636,500</td>
+                            <td><img src="img/Banksy-SimpleIntelligenceTesting-1.jpg" width="260px" height="194px"/> </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </body>
+    </html>
