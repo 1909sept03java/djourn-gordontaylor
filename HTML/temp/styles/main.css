@@ -162,10 +162,20 @@ body .darkheader {
 body h2 {
   opacity: 1 !important;
   font-family: 'Josefin Slab', serif;
-  margin: 1%;
-  margin-left: 11%;
   padding-top: 1%;
   text-align: left;
+  line-height: 1.9;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+body h5 {
+  opacity: 1 !important;
+  font-family: 'Josefin Slab', serif;
+  padding-top: 1%;
+  text-align: center;
   line-height: 1.9;
   color: white;
   font-size: 3em;
@@ -178,7 +188,8 @@ body p {
   color: white;
   background-color: black;
   opacity: 1 !important;
-  margin: 1%;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 1%;
   padding-bottom: 1%;
   padding-left: 10%;
@@ -223,4 +234,13 @@ body p {
   font-size: 3em;
   font-weight: bold;
   text-decoration: none !important;
+}
+
+.giphy-embed {
+  align: center;
+  padding: 1%;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
