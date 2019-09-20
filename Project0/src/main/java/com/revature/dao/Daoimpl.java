@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,6 +18,8 @@ import com.revature.util.ConnectionUtil;
 
 public class Daoimpl implements Dao{
 	
+	private Scanner accin;
+
 	@Override
 	public List<BANK_USER> getUser() {
 		List<BANK_USER> cl = new ArrayList<>();
@@ -100,9 +103,21 @@ boolean checking = true;
 		while(yn)
 		{
 		    System.out.println("please enter the amount of money you would like to deposit");
-		    Scanner accin = new Scanner (System.in);
-		    String tempbal = accin.nextLine();
-		    balance =  Double.parseDouble(tempbal); 
+		    accin = new Scanner (System.in);
+		    String tempbal;
+		    boolean isdouble = false;
+		    while(isdouble == false) {
+		   try { 
+			   tempbal = accin.nextLine();
+			   balance =  Double.parseDouble(tempbal);
+		   isdouble = true;}
+		   catch (InputMismatchException e) {
+			   
+			 System.out.println("Please enter a number");
+		   }catch (NumberFormatException d) {
+			   
+			 System.out.println("Please enter a number");
+		   }}
 
 		    System.out.println("Will this be a checking account?");
 

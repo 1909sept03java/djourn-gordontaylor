@@ -5,13 +5,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.revature.util.ConnectionUtil;
 
 public class Login {
 	
-	public Login() throws SQLException, IOException{
+	public Login() throws SQLException, IOException, InterruptedException{
 
 		BANK_USER c = null;
 		// TODO Auto-generated method stub
@@ -47,9 +48,13 @@ String password = null;
 					
 					
 					System.out.println("Logging You in");
+					Thread.sleep(1000);
 					System.out.print(".");
+					Thread.sleep(1000);
 					System.out.print(".");
+					Thread.sleep(1000);
 					System.out.print(".");
+					Thread.sleep(1000);
 					System.out.print(".");
 					System.out.println(" ");
 					
@@ -88,7 +93,85 @@ String password = null;
 							
 									
 								}
-			choices = true;
+			System.out.println(c.getUserName());
+if (c.getUserName().equals("Dsoyer12")) {choices = true;
+			
+			while(choices)
+			{
+			    System.out.println("What would you like to do today?");
+			    Scanner accin = new Scanner (System.in);
+			   
+			   
+
+			    System.out.println("Please enter your selection (case sensitive)");
+
+			    System.out.println("enter : 'check balance','deposit','withdraw', 'view all accounts','delete account' or 'logout' ");
+			    choice = accin.nextLine();
+
+
+			    switch(choice)
+			    {
+			        case "check balance":
+			            c.CheckBalance();
+			            
+			            break;
+
+			        case "deposit":
+			           
+			            c.Deposit(c.getAccid());
+			            break;
+			        case "withdraw":
+			        	c.Withdraw(c.getAccid());
+			        case "logout":
+			        	choices = false;
+			        	break;
+			        case "view all accounts":
+			        	ADMIN.ViewAllAccounts();
+			        	break;
+			        case "delete account":
+			        	Scanner dep2 = new Scanner(System.in);
+			    		int accid = 0;
+			    		boolean isint = false;
+
+			    		while (isint == false) {
+			    			try {
+			    				System.out.println("Please enter the users account ID");
+			    				String tempdep = dep2.nextLine();
+			    				accid = Integer.parseInt(tempdep);
+			    				isint = true;
+			    				 ADMIN.DeleteAccount(accid);
+			    			} catch (InputMismatchException d) {
+
+			    			} catch (NumberFormatException e) {
+			    			}
+			    		}
+			        	
+			       
+			        case "view transactions":
+			        
+			        case "view account by ID":
+			        	
+			        	Scanner dep3 = new Scanner(System.in);
+			    		int accid1 = 0;
+			    		boolean isint1 = false;
+
+			    		while (isint1 == false) {
+			    			try {
+			    				System.out.println("Please enter the users account ID");
+			    				String tempdep = dep3.nextLine();
+			    				accid1 = Integer.parseInt(tempdep);
+			    				isint1 = true;
+			    				 ADMIN.DeleteAccount(accid1);
+			    			} catch (InputMismatchException d) {
+
+			    			} catch (NumberFormatException e) {
+			    			}
+			    		}
+			        
+			    }
+			}
+	
+			}else  {choices = true;
 			
 			while(choices)
 			{
@@ -156,7 +239,8 @@ String password = null;
 			    }
 			}
 	
-		
+			}
+
 	
 		
 	}
