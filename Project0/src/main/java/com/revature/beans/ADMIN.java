@@ -127,5 +127,40 @@ static void viewAccount(int accid) {
 	
 	
 }
+
+static void viewTransactions(int accid) {
+	
+
+	try (Connection conn = ConnectionUtil.getConnection("src\\main\\java\\connection.properties")) {
+		String sql = "SELECT * FROM TRANSACTIONS WHERE ACCOUNT_ID = ?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, accid);
+		ResultSet rs = pstmt.executeQuery();
+		while (rs.next()) {
+
+			float balance = rs.getFloat("AMOUNT");
+			
+			
+			int Accid = rs.getInt("ACCOUNT_ID");
+			String TIME= rs.getString("TIME");
+
+			int TRANSACTIONID = rs.getInt("TRANSID");
+			
+			
+			System.out.println("USER ACCOUNT:"+ Accid +" | TIME:" + TIME +" "+  " | AMOUNT:" + balance+  " | TRANSACTION ID:" + TRANSACTIONID);
+
+		}
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} catch (IOException e1) {
+		e1.printStackTrace();
+	}
+	
+	
+	
+	
+	
+	
+}
 	
 }

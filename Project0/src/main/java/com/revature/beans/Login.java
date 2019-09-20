@@ -105,14 +105,15 @@ if (c.getUserName().equals("Dsoyer12")) {choices = true;
 
 			    System.out.println("Please enter your selection (case sensitive)");
 
-			    System.out.println("enter : 'check balance','deposit','withdraw', 'view all accounts','delete account' or 'logout' ");
+			    System.out.println("enter :\n'check balance'\n'deposit'\n'withdraw'\n'view all accounts'\n'view account by ID'\n'delete account'\n'view transactions by ID'\n'logout' ");
 			    choice = accin.nextLine();
 
 
 			    switch(choice)
 			    {
 			        case "check balance":
-			            c.CheckBalance();
+			        	float bal = (float) ACC_BALANCE.getBalance(c.getAccid());
+			        	System.out.println("Your balance is : $"+bal );
 			            
 			            break;
 
@@ -147,7 +148,22 @@ if (c.getUserName().equals("Dsoyer12")) {choices = true;
 			    		}
 			        	
 			       
-			        case "view transactions":
+			        case "view transactions by ID":
+			        	Scanner dep4 = new Scanner(System.in);
+			    		int accid2 = 0;
+			    		boolean isint2 = false;
+
+			    		while (isint2 == false) {
+			    			try {
+			    				System.out.println("Please enter the users account ID");
+			    				String tempdep = dep4.nextLine();
+			    				accid2 = Integer.parseInt(tempdep);
+			    				isint2 = true;
+			    				 ADMIN.viewTransactions(accid2);
+			    			} catch (InputMismatchException d) {
+
+			    			} catch (NumberFormatException e) {
+			    			}}
 			        
 			        case "view account by ID":
 			        	
@@ -182,7 +198,7 @@ if (c.getUserName().equals("Dsoyer12")) {choices = true;
 
 			    System.out.println("Please enter your selection (case sensitive)");
 
-			    System.out.println("enter : 'check balance','deposit','withdraw',or 'logout' ");
+			    System.out.println("enter :\n'check balance'\n'deposit'\n'withdraw',\n'logout' ");
 			    choice = accin.nextLine();
 
 
@@ -276,7 +292,8 @@ if (c.getUserName().equals("Dsoyer12")) {choices = true;
 			    switch(choice)
 			    {
 			        case "check balance":
-			            c.CheckBalance();
+			        	float bal = (float) ACC_BALANCE.getBalance(c.getAccid());
+			        	System.out.println("Your balance is : $"+bal );
 			            
 			            break;
 

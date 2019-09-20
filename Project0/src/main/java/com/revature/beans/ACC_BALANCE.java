@@ -1,4 +1,6 @@
 package com.revature.beans;
+import java.text.SimpleDateFormat; 
+import java.util.Date;  
 
 import java.io.IOException;
 import java.sql.CallableStatement;
@@ -7,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.text.SimpleDateFormat;
 
 import com.revature.util.ConnectionUtil;
 
@@ -34,7 +37,7 @@ public class ACC_BALANCE {
 			e1.printStackTrace();
 		}
 		
-		System.out.println("Your balance is : $" + balance);
+		
 		return balance;
 	}
 
@@ -45,7 +48,7 @@ public class ACC_BALANCE {
 		balance = ACC_BALANCE.getBalance(ACCOUNT_ID);
 		
 		System.out.println(balance);
-		if(balance>withdrawal) {
+		if((balance>withdrawal)&&(withdrawal>0)){
 			try(Connection con = ConnectionUtil.getConnection("src\\main\\java\\connection.properties")){
 				
 				
@@ -57,6 +60,7 @@ public class ACC_BALANCE {
 			}catch (SQLException e) {
 				e.printStackTrace();
 			} catch (IOException e1) {
+				
 				e1.printStackTrace();
 			}}
 		
@@ -66,7 +70,27 @@ public class ACC_BALANCE {
 		
 
 
+		try(Connection con = ConnectionUtil.getConnection("src\\main\\java\\connection.properties")){
 			
+			
+			
+			CallableStatement cstmt = con.prepareCall("INSERT INTO TRANSACTIONS\r\n" + 
+					"(AMOUNT, ACCOUNT_ID,TIME )\r\n" + 
+					"VALUES\r\n" + 
+					"(?, ?, to_date(?,'DD/MM/YYYY'))");
+			cstmt.setDouble(1, withdrawal*-1);
+			cstmt.setInt(2, ACCOUNT_ID);
+			Date date = new Date();  
+		    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
+		    String strDate= formatter.format(date); 
+		    cstmt.setString(3, strDate);
+			cstmt.executeQuery();
+		}catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	
 	
 	
 		System.out.println("Cash Withdrawn"
@@ -102,6 +126,27 @@ public class ACC_BALANCE {
 
 			System.out.println(balance);
 			
+
+			try(Connection con = ConnectionUtil.getConnection("src\\main\\java\\connection.properties")){
+				
+				
+				balance = balance + deposit;
+				CallableStatement cstmt = con.prepareCall("INSERT INTO TRANSACTIONS\r\n" + 
+						"(AMOUNT, ACCOUNT_ID,TIME )\r\n" + 
+						"VALUES\r\n" + 
+						"(?, ?, to_date(?,'DD/MM/YYYY'))");
+				cstmt.setDouble(1, deposit);
+				cstmt.setInt(2, ACCOUNT_ID);
+				Date date = new Date();  
+			    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
+			    String strDate= formatter.format(date); 
+			    cstmt.setString(3, strDate);
+				cstmt.executeQuery();
+			}catch (SQLException e) {
+				e.printStackTrace();
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
 	
 	
 		System.out.println("Cash Deposited");
