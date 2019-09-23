@@ -20,11 +20,11 @@ function getText() {
       p = `<div class="card" style="color:black; background-color:darkgray;">
            <img  class = "giphy-embed"src="${person.picture.medium}"  alt="Bio img">
            <ul>
-           <li>${person.name.title} ${person.name.first} ${person.name.last}</li>
+           <li>Name: ${person.name.title} ${person.name.first} ${person.name.last}</li>
            <li>
-           Nationality:${person.nat}</li>
+           Nationality: ${person.nat}</li>
            <li>
-           Address:${person.location.street},${person.location.city},${person.location.state}</li>
+           Address: ${person.location.street},${person.location.city},${person.location.state}</li>
            <li>Abilities: Classified </li>
            
            </ul>

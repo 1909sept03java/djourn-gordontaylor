@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap");
 a,
 abbr,
 address,
@@ -117,6 +117,12 @@ table {
   border-spacing: 0;
 }
 
+h1 {
+  opacity: 1 !important;
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 2em;
+}
+
 body {
   background-image: url("https://i.pinimg.com/originals/bd/04/db/bd04dbd0b858c3042fc1d43a08e8d87c.png");
 }
@@ -126,6 +132,14 @@ body {
   font-size: 3em;
   font-weight: bold;
   text-decoration: none !important;
+}
+
+.slideimgs {
+  padding: 1%;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .giphy-embed {
