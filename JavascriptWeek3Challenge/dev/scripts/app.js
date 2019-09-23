@@ -45,7 +45,7 @@ function getText() {
            
            </div>`;
                 $("#people").html(p);
-                // $("#result").append(p);
+
 
             });
 

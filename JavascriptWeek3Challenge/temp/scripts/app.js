@@ -31,7 +31,7 @@ function getText() {
             
            
            </div>`;
-      $("#people").html(p); // $("#result").append(p);
+      $("#people").html(p);
     });
   });
 }
