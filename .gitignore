@@ -71,6 +71,7 @@ local.properties
 .sts4-cache/
 
 Maven_Demo/
+/JavascriptWeek3Challenge/node_modules
 /HTML/node_modules
 /HTMLDemo/node_modules
 # End of https://www.gitignore.io/api/eclipse
