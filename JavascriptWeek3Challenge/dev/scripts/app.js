@@ -30,7 +30,7 @@ function getText() {
 
             data.results.forEach(person => {
 
-                p = `<div class="card" style="color:black; background-color:darkgray;">
+                p = `<div class="card" style="color:black; padding:1%;background-color:black;color:white; opacity:0.7;">
            <img  class = "giphy-embed"src="${person.picture.medium}"  alt="Bio img">
            <ul>
            <li>Name: ${person.name.title} ${person.name.first} ${person.name.last}</li>
