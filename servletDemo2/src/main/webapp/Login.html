@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="headerstyle"><img class="headerstyle" src="headerimg.png" alt="logo"></header>
+    <div class="loginstyle">
+
+        <div class="display">
+            <h1 style="font-size:2em;color:white;">Employee Login</h1>
+            <!-- action attribute is the form handler -->
+            <!-- method attribute is the HTTP method to be used -->
+            <form action="login" method="POST">
+                <fieldset>
+                    <legend>username:</legend>
+                    <input required autocomplete="off" name="username" />
+                </fieldset>
+                <fieldset>
+                    <legend>password:</legend>
+                    <input required autocomplete="off" type="password" name="password" />
+                </fieldset>
+                <br>
+                <input type="submit" value="login" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

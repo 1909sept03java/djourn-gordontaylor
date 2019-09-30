@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: url("https://revature.com/wp-content/uploads/2017/08/rev-logo-2.png");
+    width: 100% !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
+}
+
+.appstyle {
+    align-content: center;
+    margin: 40%;
+    background-color: orangered;
+    opacity: 0.9;
+    border-style: solid;
+    border-color: white;
+}

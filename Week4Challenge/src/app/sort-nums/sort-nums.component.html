@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+<div style="margin-top: 1%">
+    <div class="toggle-panel card" *ngIf="show">
+        <div class="card-header"><span style="color:black;"><p>- Enter numbers to be sorted (seperate with commas) - </p></span></div>
+        <div id="myDiv">
+
+        </div>
+        <div></div>
+        <div class="card-body">
+            <div id="comments">
+
+
+                <input [(ngModel)]="comment" placeholder="Type a comment"> <button (click)="addToComment()">send</button>
+            </div>
+        </div>
+    </div>
+    <button (click)="toggleDiv()" class="btn btn-danger">View Number Sorter</button></div>

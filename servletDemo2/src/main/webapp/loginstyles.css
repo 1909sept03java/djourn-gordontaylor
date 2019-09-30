@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+.display {
+    background-color: #335a7a;
+    text-align: center;
+    opacity: 0.8;
+    padding: 5rem;
+    margin: 2rem;
+    margin-right: 40%;
+    width: 15em;
+    font-family: 'Gayathri', sans-serif;
+    color: white;
+}
+
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+    background-image: url("bg.jpg");
+}
+
+.headerstyle {
+    max-height: 30rem;
+    opacity: 0.9;
+    width: 100%;
+}
