@@ -15,22 +15,20 @@ public class SessionServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -1319793763433572026L;
 
-	// return a JSON representation of the currently authenticated user for a
-	// request's JSESSIONID
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// grab current session, if it exists, otherwise return null
+		
 		HttpSession session = req.getSession(false);
 		try {
-			// grab session attributes and place them within a user object
 			int userId = Integer.parseInt(session.getAttribute("userId").toString());
 			String firstname = session.getAttribute("firstname").toString();
 			String lastname = session.getAttribute("lastname").toString();
 			String password = session.getAttribute("password").toString();
 			String admin = session.getAttribute("admin").toString();
-			User u = new User(userId, firstname, lastname,password,admin);
-			// use ObjectMapper (part of the Jackson api) to convert Java object to JSON
-			// representation
+			int managerId = Integer.parseInt(session.getAttribute("manager").toString());
+			User u = new User(userId, firstname, lastname,password,admin,managerId);
+			
 			resp.getWriter().write((new ObjectMapper()).writeValueAsString(u));
 		} catch (Exception e) {
 			e.printStackTrace();

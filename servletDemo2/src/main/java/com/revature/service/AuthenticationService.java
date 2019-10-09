@@ -30,7 +30,7 @@ public class AuthenticationService {
 
 				try (Connection conn = ConnectionUtil.getConnection()) {
 					System.out.println("here1");
-					String sql = "SELECT COUNT(USERNAME) AS COUNT, LASTNAME,FIRSTNAME,EMPLOYEEID,PASSWORD,ADMIN FROM EMPLOYEE WHERE USERNAME = ? AND PASSWORD = ? GROUP BY USERNAME,LASTNAME,FIRSTNAME,PASSWORD,EMPLOYEEID,ADMIN";
+					String sql = "SELECT COUNT(USERNAME) AS COUNT, LASTNAME,FIRSTNAME,EMPLOYEEID,PASSWORD,ADMIN,REPORTSTO FROM EMPLOYEE WHERE USERNAME = ? AND PASSWORD = ? GROUP BY USERNAME,LASTNAME,FIRSTNAME,PASSWORD,EMPLOYEEID,ADMIN,REPORTSTO";
 					PreparedStatement pstmt = conn.prepareStatement(sql);
 					pstmt.setString(1, username);
 					pstmt.setString(2, password);
@@ -43,12 +43,12 @@ public class AuthenticationService {
 						int checker = rs.getInt("COUNT");
 						String lastname = rs.getString("LASTNAME");
 						String firstname = rs.getString("FIRSTNAME");
-						
+						int manager = rs.getInt("REPORTSTO");
 						int id = rs.getInt("EMPLOYEEID");
 						String admin = rs.getString("ADMIN");
 						if(checker>0) {
 							
-							u = new User(id,firstname,lastname,password,admin);
+							u = new User(id,firstname,lastname,password,admin,manager);
 							
 							
 						

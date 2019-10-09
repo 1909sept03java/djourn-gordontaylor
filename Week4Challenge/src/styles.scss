@@ -9,14 +9,14 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     overflow: hidden;
-}
-
-.appstyle {
-    padding: 1%;
-    align-content: center;
-    margin: 10%;
-    background-color: orangered;
-    opacity: 0.9;
-    border-style: solid;
-    border-color: white;
+    .appstyle {
+        padding: 1%;
+        align-content: center;
+        margin: 10%;
+        background-color: orangered;
+        opacity: 0.9;
+        border-left: solid;
+        border-width: 2em;
+        border-color: white;
+    }
 }

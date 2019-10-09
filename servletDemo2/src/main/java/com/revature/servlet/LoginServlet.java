@@ -56,11 +56,12 @@ public class LoginServlet extends HttpServlet {
 			// they're real 
 			// set user information as session attributes (not request attributes)
 			session.setAttribute("userId", u.getId());
-			session.setAttribute("firstname", u.getFirstname());
-			session.setAttribute("lastname", u.getLastname());
+			session.setAttribute("firstname", u.getFirstName());
+			session.setAttribute("lastname", u.getLastName());
 			session.setAttribute("admin", u.getAdmin());
 			session.setAttribute("password", u.getPassword());
 			session.setAttribute("problem", null);
+			session.setAttribute("manager", u.getManager());
 			// redirect to their profile
 			if(u.getAdmin().equals("YES")) {
 				
