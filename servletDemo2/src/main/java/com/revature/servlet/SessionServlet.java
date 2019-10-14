@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.beans.User;
 @WebServlet("/session")
+
 public class SessionServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -1319793763433572026L;

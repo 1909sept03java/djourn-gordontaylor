@@ -1,0 +1,6 @@
+INSERT INTO COURSE VALUES(800, 'Earth Science');
+INSERT INTO COURSE VALUES(835, 'Computer Science');
+
+
+
+COMMIT;
